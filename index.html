@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <title>My Fruitlist App</title>
+</head>
+<body style="background-image: linear-gradient(90deg, #72f2e7, #597fb9)">
+    <div class="container mt-4">
+
+        
+        <h1 class="display-4 text-center"><i class="fas fa-apple-alt"></i>My<span class="text-primary">Fruit</span>List</h1><br>
+        <!--Form-->
+
+
+            <body>  
+            <form onsubmit="event.preventDefault(); validateform(); " name="RegForm" >  
+
+                <div class="form-group">
+                    <label>Fruit</label>
+                    <input type="text" name="fruitName" id="fruitName" class="form-control" required >
+                    <span class="text-danger font-weight-bold" id="fruitNameerr"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Quantity (g)</label>
+                    <input type="number" name="quantity" id="quantity" class="form-control" required >
+                    <span class="text-danger font-weight-bold" id="quantityerr"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Amount (Rs)</label>
+                    <input type="number" name="id" id="id" class="form-control" required >
+                </div>
+    
+                
+            <input type="submit" value="Add Fruit" class="btn btn-primary btn-block">  
+            </form>  
+          
+
+        <input type="text" name="" id="myInput" placeholder="Enter the id to search " onkeyup="searchfun()" style="margin-top: 20px;">
+
+        <!--List-->
+        <table class="table table-striped mt-4" id="fruit-list">
+            <thead>
+                <tr>
+                    <th>Fruit</th>
+                    <th>Quantity (g)</th>
+                    <th>Amount (Rs)</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+
+            </thead > 
+
+            <tbody id="myTable">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="fruitapp.js"></script>
+</body>
